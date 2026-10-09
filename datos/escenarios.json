@@ -1,0 +1,28 @@
+{
+  "juego": "¿Quién trabaja aquí?",
+  "atributos": ["lugar", "ropa", "vehiculo", "trabaja_con", "herramienta"],
+  "pistas_fuertes": ["herramienta", "lugar"],
+  "fallos_para_pista_fuerte": 2,
+  "frases": {
+    "lugar": "TRABAJA EN {}",
+    "ropa": "LLEVA {}",
+    "vehiculo": "MANEJA {}",
+    "vehiculo:ninguno": "NO MANEJA",
+    "trabaja_con": "TRABAJA CON {}",
+    "herramienta": "USA {}"
+  },
+  "oficios": [
+    {"oficio": "médico",      "lugar": "hospital",   "ropa": "bata",       "vehiculo": "ninguno", "trabaja_con": "personas", "herramienta": "estetoscopio"},
+    {"oficio": "enfermero",   "lugar": "hospital",   "ropa": "mascarilla", "vehiculo": "ninguno", "trabaja_con": "personas", "herramienta": "jeringa"},
+    {"oficio": "veterinario", "lugar": "hospital",   "ropa": "bata",       "vehiculo": "ninguno", "trabaja_con": "animales", "herramienta": "estetoscopio"},
+    {"oficio": "bombero",     "lugar": "calle",      "ropa": "casco",      "vehiculo": "camión",  "trabaja_con": "personas", "herramienta": "manguera"},
+    {"oficio": "policía",     "lugar": "calle",      "ropa": "gorra",      "vehiculo": "auto",    "trabaja_con": "personas", "herramienta": "silbato"},
+    {"oficio": "cartero",     "lugar": "calle",      "ropa": "gorra",      "vehiculo": "moto",    "trabaja_con": "cosas",    "herramienta": "carta"},
+    {"oficio": "cocinero",    "lugar": "cocina",     "ropa": "gorro",      "vehiculo": "ninguno", "trabaja_con": "comida",   "herramienta": "olla"},
+    {"oficio": "agricultor",  "lugar": "campo",      "ropa": "sombrero",   "vehiculo": "tractor", "trabaja_con": "plantas",  "herramienta": "pala"},
+    {"oficio": "mecánico",    "lugar": "taller",     "ropa": "guantes",    "vehiculo": "auto",    "trabaja_con": "cosas",    "herramienta": "llave"},
+    {"oficio": "carpintero",  "lugar": "taller",     "ropa": "delantal",   "vehiculo": "ninguno", "trabaja_con": "cosas",    "herramienta": "martillo"},
+    {"oficio": "profesor",    "lugar": "escuela",    "ropa": "camisa",     "vehiculo": "ninguno", "trabaja_con": "niños",    "herramienta": "libro"},
+    {"oficio": "peluquero",   "lugar": "peluquería", "ropa": "delantal",   "vehiculo": "ninguno", "trabaja_con": "personas", "herramienta": "tijera"}
+  ]
+}
