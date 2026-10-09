@@ -1,9 +1,7 @@
-"""Experimento B - Matriz digital de selección de pictogramas (sin visión computacional).
+"""Matriz digital de selección de pictogramas (Gradio).
 
-El agente muestra la pista como tarjetas de pictogramas y el jugador responde tocando
-un oficio del tablero. Usa el mismo motor del Experimento A.
-
-  python experimento_b_matriz.py   -> abre http://127.0.0.1:7860
+Uso:
+    python experimento_b_matriz.py    Servidor en http://127.0.0.1:7860
 """
 import random
 from pathlib import Path
@@ -31,7 +29,7 @@ def nueva_partida():
 
 
 def elegir(est, objetivo, evt: gr.SelectData):
-    if objetivo is None:  # partida terminada: esperar "Nueva partida"
+    if objetivo is None:
         return est, objetivo, gr.skip(), gr.skip()
     r = LISTA[evt.index]
     if evaluar(est, objetivo, r):

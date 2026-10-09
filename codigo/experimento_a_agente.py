@@ -1,11 +1,8 @@
-"""Experimento A - Agente guía en consola para "¿Quién trabaja aquí?" (Kallpa-Play AI).
+"""Agente guía basado en ganancia de información (ID3) para "¿Quién trabaja aquí?".
 
-Baseline: en cada turno el agente da la pista con mayor Ganancia de Información (ID3)
-sobre los oficios que todavía son posibles. Las pistas fuertes (herramienta y, al final,
-lugar) se guardan para cuando el jugador falla varias veces, así nadie se queda atascado.
-
-  python experimento_a_agente.py         -> jugar una partida
-  python experimento_a_agente.py --sim   -> simular 1000 partidas y medir
+Uso:
+    python experimento_a_agente.py          Partida en consola.
+    python experimento_a_agente.py --sim    Simulación de 1000 partidas.
 """
 import json
 import math
@@ -18,22 +15,21 @@ DATOS = json.loads((Path(__file__).resolve().parent.parent / "datos" / "escenari
 OFICIOS = {o["oficio"]: o for o in DATOS["oficios"]}
 ATRIBUTOS = DATOS["atributos"]
 FRASES = DATOS["frases"]
-FUERTES = DATOS["pistas_fuertes"]  # en orden: la última es la más fácil
+FUERTES = DATOS["pistas_fuertes"]
 FALLOS_FUERTE = DATOS["fallos_para_pista_fuerte"]
 
-# Cada oficio debe poder distinguirse de los demás, si no el juego no tiene solución.
 assert len({tuple(o[a] for a in ATRIBUTOS) for o in OFICIOS.values()}) == len(OFICIOS), "hay oficios con atributos idénticos"
 
 
 def ganancia(cands, attr):
-    """ID3: H(C) - H(C|A). Con oficios equiprobables H(C) = log2 n y H(C|A=v) = log2 n_v."""
+    """Ganancia de información ID3: H(C) - H(C|A), con clases equiprobables."""
     n = len(cands)
     conteo = Counter(OFICIOS[o][attr] for o in cands)
     return math.log2(n) - sum(nv / n * math.log2(nv) for nv in conteo.values())
 
 
 def elegir_pista(est):
-    """Estrategia de guía: mejor pista por entropía; las pistas fuertes se guardan como ayuda extra."""
+    """Selecciona la pista de mayor ganancia; las pistas fuertes se reservan como ayuda progresiva."""
     utiles = [a for a in ATRIBUTOS if a not in est["dadas"] and a not in FUERTES and ganancia(est["cands"], a) > 0]
     fuertes = [a for a in FUERTES if a not in est["dadas"]]
     if fuertes and (est["fallos"] >= FALLOS_FUERTE or not utiles):
@@ -42,22 +38,22 @@ def elegir_pista(est):
 
 
 def tarjetas(attr, valor):
-    """Palabras de la pista, una por tarjeta de pictograma: ["trabaja", "en", "hospital"]."""
+    """Tokens de la pista, uno por pictograma."""
     return FRASES.get(f"{attr}:{valor}", FRASES[attr]).format(valor).lower().split()
 
 
 def frase(attr, valor):
-    """Frase en pictogramas: cada palabra es una tarjeta, ej. [TRABAJA] + [EN] + [HOSPITAL]."""
+    """Representación textual de la pista en pictogramas."""
     return " + ".join(f"[{p.upper()}]" for p in tarjetas(attr, valor))
 
 
 def nuevo_estado():
-    """Estado = (candidatos posibles, pistas dadas, fallos)."""
+    """Estado inicial: candidatos, pistas dadas y fallos."""
     return {"cands": set(OFICIOS), "dadas": set(), "fallos": 0}
 
 
 def dar_pista(est, objetivo):
-    """Elige la siguiente pista y actualiza el estado. Devuelve (atributo, valor) o None si no quedan."""
+    """Aplica la siguiente pista al estado. Retorna (atributo, valor) o None."""
     attr = elegir_pista(est)
     if not attr:
         return None
@@ -68,7 +64,7 @@ def dar_pista(est, objetivo):
 
 
 def evaluar(est, objetivo, respuesta):
-    """Transición tras la respuesta del jugador. True = victoria."""
+    """Función de transición; retorna True si la respuesta es correcta."""
     if respuesta == objetivo:
         return True
     est["fallos"] += 1
@@ -77,7 +73,7 @@ def evaluar(est, objetivo, respuesta):
 
 
 def partida(objetivo, responder, decir=print):
-    """Juega una partida en consola. Devuelve (pistas, intentos)."""
+    """Ejecuta una partida. Retorna (pistas, intentos)."""
     est = nuevo_estado()
     while True:
         pista = dar_pista(est, objetivo)
@@ -104,7 +100,7 @@ def humano(est):
 
 
 def simular(n=1000):
-    """Jugador simulado que elige al azar entre los oficios que siguen siendo posibles."""
+    """Evalúa el agente con un jugador que elige al azar entre los candidatos."""
     random.seed(0)
     res = [partida(random.choice(list(OFICIOS)), lambda est: random.choice(sorted(est["cands"])), decir=lambda *_: None)
            for _ in range(n)]
