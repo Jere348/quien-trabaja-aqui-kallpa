@@ -4,12 +4,12 @@
   "pistas_fuertes": ["herramienta", "lugar"],
   "fallos_para_pista_fuerte": 2,
   "frases": {
-    "lugar": "TRABAJA EN {}",
-    "ropa": "LLEVA {}",
-    "vehiculo": "MANEJA {}",
-    "vehiculo:ninguno": "NO MANEJA",
-    "trabaja_con": "TRABAJA CON {}",
-    "herramienta": "USA {}"
+    "lugar": "QUIÉN TRABAJA EN {}",
+    "ropa": "QUIÉN LLEVA {}",
+    "vehiculo": "QUIÉN MANEJA {}",
+    "vehiculo:ninguno": "QUIÉN NO MANEJA",
+    "trabaja_con": "QUIÉN TRABAJA CON {}",
+    "herramienta": "QUIÉN USA {}"
   },
   "oficios": [
     {"oficio": "médico",      "lugar": "hospital",   "ropa": "bata",       "vehiculo": "ninguno", "trabaja_con": "personas", "herramienta": "estetoscopio"},
