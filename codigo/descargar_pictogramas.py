@@ -1,9 +1,8 @@
-"""Parte 3 - Descarga de ARASAAC los pictogramas que usa el juego.
+"""Descarga los pictogramas del juego desde la API de ARASAAC.
 
-  python descargar_pictogramas.py
+Genera datos/pictogramas/<palabra>.png y catalogo.json (palabra -> id ARASAAC).
+Los ids registrados en catalogo.json tienen prioridad sobre la búsqueda automática.
 
-Guarda datos/pictogramas/<palabra>.png y catalogo.json (palabra -> id ARASAAC).
-Si un pictograma salió mal: cambia su id en catalogo.json, borra su .png y vuelve a correr.
 Pictogramas: ARASAAC (https://arasaac.org), Gobierno de Aragón, licencia CC BY-NC-SA.
 """
 import json
@@ -20,7 +19,7 @@ IMG = "https://static.arasaac.org/pictograms/{0}/{0}_500.png"
 
 
 def palabras():
-    """Todas las tarjetas del juego: oficios + cada palabra de cada pista posible."""
+    """Vocabulario completo: oficios y tokens de todas las pistas."""
     return sorted(set(OFICIOS) | {p for o in OFICIOS.values() for a in ATRIBUTOS for p in tarjetas(a, o[a])})
 
 
