@@ -1,26 +1,37 @@
-"""Matriz digital de selección de pictogramas con síntesis de voz (Gradio + gTTS).
+"""Prototipo integrado: tablero de pictogramas con voz, guiado por el agente Q-Learning.
+
+El agente elige cada pista con la política aprendida y ajusta el nivel de apoyo según los fallos
+de las partidas anteriores de la sesión. Si aún no hay tabla Q entrenada usa el baseline ID3.
 
 Uso:
-    python experimento_b_matriz.py    Servidor en http://127.0.0.1:7860
+    python juego.py    Servidor en http://127.0.0.1:7860
 """
 import base64
+import csv
 import hashlib
 import random
 import re
 import threading
 import time
+import uuid
 from pathlib import Path
 from urllib.parse import quote
 
 import gradio as gr
 from gtts import gTTS
 
+from entorno import MIRA_BIEN, NIVELES_APOYO, nivel_apoyo
 from experimento_a_agente import ATRIBUTOS, OFICIOS, dar_pista, evaluar, nuevo_estado, tarjetas
+from q_learning import VARIEDAD, cargar, politica_q
 
 DATOS = Path(__file__).resolve().parent.parent / "datos"
 PICTOS = DATOS / "pictogramas"
 AUDIO = DATOS / "audio"
+REGISTRO = DATOS / "registro" / "partidas.csv"
+CAMPOS = ["fecha", "sesion", "partida", "apoyo", "objetivo", "pista", "respuesta", "acierto", "fallos"]
 LISTA = list(OFICIOS)
+Q = cargar()
+POLITICA = politica_q(Q, VARIEDAD) if Q else None
 
 FUENTE = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap">'
 CLARO = """() => {
@@ -105,6 +116,7 @@ footer { display: none !important; }
 #repetir { background: var(--azul); color: #fff; }
 #nueva { background: var(--sol); color: var(--tinta); }
 #repetir:active, #nueva:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--tinta); }
+.pie { margin: 12px 0 0; text-align: center; font: 500 .95rem var(--letra); color: #4A5878; }
 
 .tablero {
   container-type: inline-size; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 16px;
@@ -224,8 +236,28 @@ def sonido(dicho):
     return f'<audio src="data:audio/mpeg;base64,{base64.b64encode(mp3).decode()}" data-n="{time.time_ns()}"></audio>'
 
 
+def registrar(sesion, est, objetivo, respuesta, acierto):
+    """Añade el turno a la matriz de eventos, sin datos personales, para calibrar el modelo del jugador."""
+    REGISTRO.parent.mkdir(exist_ok=True)
+    nuevo = not REGISTRO.exists()
+    with REGISTRO.open("a", newline="", encoding="utf-8") as f:
+        salida = csv.writer(f)
+        if nuevo:
+            salida.writerow(CAMPOS)
+        salida.writerow([time.strftime("%Y-%m-%d %H:%M:%S"), sesion["id"], len(sesion["historial"]) + 1,
+                         NIVELES_APOYO[est["apoyo"]], objetivo, est["pista"], respuesta, int(acierto), est["fallos"]])
+
+
+def pie(sesion, est):
+    """Línea informativa para el educador: motor activo, nivel de apoyo y número de partida."""
+    motor = "Q-Learning" if POLITICA else "ID3"
+    return (f'<p class="pie">🤖 Agente {motor} · Apoyo {NIVELES_APOYO[est["apoyo"]]} · '
+            f'Partida {len(sesion["historial"]) + 1}</p>')
+
+
 def turno(est, objetivo, mensaje, tono, dicho):
-    pista = dar_pista(est, objetivo)
+    pista = dar_pista(est, objetivo, POLITICA)
+    est["pista"] = pista[0] if pista else MIRA_BIEN
     if pista:
         palabras = tarjetas(*pista)
         dicho = [*dicho, pregunta(palabras)]
@@ -237,27 +269,38 @@ def turno(est, objetivo, mensaje, tono, dicho):
             tablero(est["malos"]), sonido(dicho), dicho)
 
 
-def nueva_partida():
-    return turno(nuevo_estado() | {"malos": []}, random.choice(LISTA), "¿Quién trabaja aquí? 🤔", "", ["¿Quién trabaja aquí?"])
+def nueva_partida(sesion):
+    """Inicia una partida: saca el oficio de una bolsa sin repetición y fija el apoyo según la sesión."""
+    sesion = sesion or {"id": uuid.uuid4().hex[:8], "historial": [], "bolsa": []}
+    if not sesion["bolsa"]:
+        sesion["bolsa"] = random.sample(LISTA, len(LISTA))
+    est = nuevo_estado() | {"malos": [], "apoyo": nivel_apoyo(sesion["historial"])}
+    salida = turno(est, sesion["bolsa"].pop(), "¿Quién trabaja aquí? 🤔", "", ["¿Quién trabaja aquí?"])
+    return *salida, sesion, pie(sesion, est)
 
 
-def elegir(est, objetivo, evt: gr.EventData):
+def elegir(est, objetivo, sesion, evt: gr.EventData):
     try:
         r = evt.oficio
     except Exception:
         r = None
     if objetivo is None or r not in LISTA or r in est["malos"]:
-        return (gr.skip(),) * 6
-    if evaluar(est, objetivo, r):
+        return (gr.skip(),) * 8
+    acierto = evaluar(est, objetivo, r)
+    registrar(sesion, est, objetivo, r, acierto)
+    if acierto:
         dicho = ["¡Muy bien!", f"Es el {objetivo}."]
+        informe = pie(sesion, est)
+        sesion["historial"].append(est["fallos"])
         return (est, None, panel(f"🎉 ¡Muy bien! Es el {objetivo.upper()}", "bien", "", [objetivo], len(est["dadas"])),
-                tablero(est["malos"], objetivo), sonido(dicho), dicho)
+                tablero(est["malos"], objetivo), sonido(dicho), dicho, sesion, informe)
     est["malos"].append(r)
-    return turno(est, objetivo, f"❌ No es {r.upper()}. ¡Intenta otra vez!", "error", [f"No es {r}.", "¡Intenta otra vez!"])
+    salida = turno(est, objetivo, f"❌ No es {r.upper()}. ¡Intenta otra vez!", "error", [f"No es {r}.", "¡Intenta otra vez!"])
+    return *salida, sesion, pie(sesion, est)
 
 
 with gr.Blocks(title="¿Quién trabaja aquí?") as demo:
-    est, objetivo, dicho = gr.State(), gr.State(), gr.State()
+    est, objetivo, dicho, sesion = gr.State(), gr.State(), gr.State(), gr.State()
     gr.HTML('<header class="cartel"><h1>¿Quién trabaja aquí?</h1></header>', apply_default_css=False)
     with gr.Row(equal_height=False):
         with gr.Column(scale=4, min_width=320, elem_id="lado-pista"):
@@ -265,14 +308,15 @@ with gr.Blocks(title="¿Quién trabaja aquí?") as demo:
             with gr.Row():
                 repetir = gr.Button("🔊 Repetir", elem_id="repetir")
                 nueva = gr.Button("🔄 Nueva partida", elem_id="nueva")
+            informe = gr.HTML(apply_default_css=False)
         with gr.Column(scale=5, min_width=480):
             casillas = gr.HTML(tablero(), js_on_load=CLIC, apply_default_css=False)
     audio = gr.HTML(js_on_load=SONAR, apply_default_css=False, visible="hidden")
 
-    salidas = [est, objetivo, cartas, casillas, audio, dicho]
-    demo.load(nueva_partida, outputs=salidas, show_progress="hidden")
-    nueva.click(nueva_partida, outputs=salidas, show_progress="hidden")
-    casillas.click(elegir, inputs=[est, objetivo], outputs=salidas, show_progress="hidden")
+    salidas = [est, objetivo, cartas, casillas, audio, dicho, sesion, informe]
+    demo.load(nueva_partida, inputs=sesion, outputs=salidas, show_progress="hidden")
+    nueva.click(nueva_partida, inputs=sesion, outputs=salidas, show_progress="hidden")
+    casillas.click(elegir, inputs=[est, objetivo, sesion], outputs=salidas, show_progress="hidden")
     repetir.click(sonido, inputs=dicho, outputs=audio, show_progress="hidden")
 
 if __name__ == "__main__":
