@@ -1,0 +1,23 @@
+{
+  "descripcion": "Parámetros sintéticos del jugador simulado y de la recompensa. Son supuestos de diseño: se calibrarán con partidas reales en Kallpa.",
+  "comprension": {
+    "ropa": 0.90,
+    "vehiculo": 0.90,
+    "vehiculo:ninguno": 0.60,
+    "trabaja_con": 0.80,
+    "herramienta": 0.95,
+    "lugar": 0.95,
+    "mira_bien": 1.00
+  },
+  "perfiles": {
+    "autónomo":    {"dificultad": 1.0, "despiste": 0.05, "frustracion": 2},
+    "apoyo medio": {"dificultad": 2.0, "despiste": 0.15, "frustracion": 3},
+    "apoyo alto":  {"dificultad": 3.5, "despiste": 0.30, "frustracion": 5}
+  },
+  "perfil_no_visto": {"dificultad": 2.75, "despiste": 0.22, "frustracion": 4},
+  "recompensa": {"acierto": 10, "pista": -1, "pista_fuerte": -4, "mira_bien": -5},
+  "ultima_pista": "lugar",
+  "max_turnos": 8,
+  "partidas_por_sesion": 6,
+  "umbrales_apoyo": [0.5, 1.5]
+}
