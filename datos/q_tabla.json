@@ -1,0 +1,2462 @@
+{
+"meta": {
+"episodios": 300000,
+"omega": 0.85,
+"gamma": 0.95,
+"epsilon": [
+1.0,
+0.05
+],
+"semilla": 0
+},
+"q": {
+"agricultor||0|0": {
+"vehiculo": 6.817,
+"ropa": 7.134,
+"trabaja_con": 6.298,
+"herramienta": 4.569
+},
+"agricultor||0|1": {
+"vehiculo": 6.22,
+"herramienta": 4.487,
+"ropa": 6.241,
+"trabaja_con": 5.46
+},
+"agricultor||0|2": {
+"trabaja_con": 4.507,
+"herramienta": 3.638,
+"ropa": 4.523,
+"vehiculo": 4.521
+},
+"agricultor|herramienta|1|0": {
+"ropa": 7.401,
+"trabaja_con": 6.759,
+"vehiculo": 7.063
+},
+"agricultor|herramienta|1|1": {
+"trabaja_con": 6.485,
+"ropa": 7.214,
+"vehiculo": 6.909
+},
+"agricultor|herramienta|1|2": {
+"trabaja_con": 6.494,
+"ropa": 5.649,
+"vehiculo": 7.269
+},
+"agricultor|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": 1.449
+},
+"agricultor|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 0.441
+},
+"agricultor|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": 2.944
+},
+"agricultor|herramienta,ropa|2|0": {
+"vehiculo": 6.427,
+"trabaja_con": 6.999
+},
+"agricultor|herramienta,ropa|2|1": {
+"vehiculo": 5.233,
+"trabaja_con": 5.762
+},
+"agricultor|herramienta,ropa|2|2": {
+"vehiculo": 5.795,
+"trabaja_con": 4.391
+},
+"agricultor|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 8.379
+},
+"agricultor|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 6.008
+},
+"agricultor|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 1.138
+},
+"agricultor|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 2.232
+},
+"agricultor|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 2.296
+},
+"agricultor|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": 1.613
+},
+"agricultor|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 2.867
+},
+"agricultor|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 5.83
+},
+"agricultor|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 5.976
+},
+"agricultor|herramienta,trabaja_con|2|0": {
+"vehiculo": 6.083,
+"ropa": 7.012
+},
+"agricultor|herramienta,trabaja_con|2|1": {
+"vehiculo": 6.141,
+"ropa": 6.385
+},
+"agricultor|herramienta,trabaja_con|2|2": {
+"vehiculo": 4.629,
+"ropa": 5.37
+},
+"agricultor|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 5.787
+},
+"agricultor|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 4.704
+},
+"agricultor|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 7.042
+},
+"agricultor|herramienta,vehiculo|2|0": {
+"trabaja_con": 5.616,
+"ropa": 8.431
+},
+"agricultor|herramienta,vehiculo|2|1": {
+"trabaja_con": 4.131,
+"ropa": 6.863
+},
+"agricultor|herramienta,vehiculo|2|2": {
+"ropa": 6.866,
+"trabaja_con": 4.899
+},
+"agricultor|ropa|1|0": {
+"vehiculo": 6.501,
+"trabaja_con": 5.955,
+"herramienta": 4.302
+},
+"agricultor|ropa|1|1": {
+"trabaja_con": 5.286,
+"herramienta": 3.549,
+"vehiculo": 5.826
+},
+"agricultor|ropa|1|2": {
+"trabaja_con": 3.642,
+"herramienta": 3.56,
+"vehiculo": 4.46
+},
+"agricultor|ropa,trabaja_con|2|0": {
+"herramienta": 4.846,
+"vehiculo": 6.726
+},
+"agricultor|ropa,trabaja_con|2|1": {
+"herramienta": 4.323,
+"vehiculo": 4.939
+},
+"agricultor|ropa,trabaja_con|2|2": {
+"vehiculo": -0.234,
+"herramienta": 0.975
+},
+"agricultor|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 1.9
+},
+"agricultor|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 2.945
+},
+"agricultor|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": 0.639
+},
+"agricultor|ropa,vehiculo|2|0": {
+"trabaja_con": 4.931,
+"herramienta": 3.573
+},
+"agricultor|ropa,vehiculo|2|1": {
+"herramienta": 3.412,
+"trabaja_con": 4.321
+},
+"agricultor|ropa,vehiculo|2|2": {
+"herramienta": 1.905,
+"trabaja_con": 2.795
+},
+"agricultor|trabaja_con|1|0": {
+"ropa": 6.793,
+"herramienta": 4.918,
+"vehiculo": 6.184
+},
+"agricultor|trabaja_con|1|1": {
+"vehiculo": 6.335,
+"herramienta": 4.479,
+"ropa": 6.515
+},
+"agricultor|trabaja_con|1|2": {
+"vehiculo": 5.53,
+"ropa": 5.159,
+"herramienta": 3.03
+},
+"agricultor|trabaja_con,vehiculo|2|0": {
+"ropa": 4.82,
+"herramienta": 4.311
+},
+"agricultor|trabaja_con,vehiculo|2|1": {
+"ropa": 5.815,
+"herramienta": 1.85
+},
+"agricultor|trabaja_con,vehiculo|2|2": {
+"herramienta": 3.96,
+"ropa": 4.797
+},
+"agricultor|vehiculo|1|0": {
+"ropa": 6.36,
+"trabaja_con": 6.087,
+"herramienta": 4.586
+},
+"agricultor|vehiculo|1|1": {
+"herramienta": 4.25,
+"ropa": 5.891,
+"trabaja_con": 5.158
+},
+"agricultor|vehiculo|1|2": {
+"herramienta": 4.321,
+"trabaja_con": 3.663,
+"ropa": 4.443
+},
+"bombero||0|0": {
+"trabaja_con": 3.92,
+"vehiculo": 6.738,
+"herramienta": 4.635,
+"ropa": 7.118
+},
+"bombero||0|1": {
+"ropa": 6.229,
+"trabaja_con": 2.87,
+"vehiculo": 5.97,
+"herramienta": 3.844
+},
+"bombero||0|2": {
+"ropa": 4.794,
+"herramienta": 2.987,
+"trabaja_con": 1.271,
+"vehiculo": 4.735
+},
+"bombero|herramienta|1|0": {
+"trabaja_con": 4.941,
+"vehiculo": 6.086,
+"ropa": 7.384
+},
+"bombero|herramienta|1|1": {
+"trabaja_con": 5.44,
+"vehiculo": 6.122,
+"ropa": 6.464
+},
+"bombero|herramienta|1|2": {
+"vehiculo": 5.447,
+"trabaja_con": 5.168,
+"ropa": 6.12
+},
+"bombero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": -0.381
+},
+"bombero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 1.004
+},
+"bombero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": 2.732
+},
+"bombero|herramienta,ropa|2|0": {
+"vehiculo": 4.467,
+"trabaja_con": 3.476
+},
+"bombero|herramienta,ropa|2|1": {
+"trabaja_con": 5.782,
+"vehiculo": 5.49
+},
+"bombero|herramienta,ropa|2|2": {
+"vehiculo": 5.662,
+"trabaja_con": 5.04
+},
+"bombero|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 4.291
+},
+"bombero|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 4.528
+},
+"bombero|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 4.356
+},
+"bombero|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 0.718
+},
+"bombero|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 1.238
+},
+"bombero|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": 2.415
+},
+"bombero|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 2.646
+},
+"bombero|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 3.778
+},
+"bombero|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 0.477
+},
+"bombero|herramienta,trabaja_con|2|0": {
+"ropa": 5.962,
+"vehiculo": 6.566
+},
+"bombero|herramienta,trabaja_con|2|1": {
+"ropa": 6.736,
+"vehiculo": 4.58
+},
+"bombero|herramienta,trabaja_con|2|2": {
+"ropa": 4.856,
+"vehiculo": 7.178
+},
+"bombero|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 6.075
+},
+"bombero|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 4.166
+},
+"bombero|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 5.114
+},
+"bombero|herramienta,vehiculo|2|0": {
+"ropa": -1.049,
+"trabaja_con": 5.637
+},
+"bombero|herramienta,vehiculo|2|1": {
+"ropa": 3.425,
+"trabaja_con": 4.679
+},
+"bombero|herramienta,vehiculo|2|2": {
+"trabaja_con": 4.314,
+"ropa": 3.029
+},
+"bombero|ropa|1|0": {
+"vehiculo": 6.42,
+"herramienta": 4.77,
+"trabaja_con": 4.561
+},
+"bombero|ropa|1|1": {
+"vehiculo": 5.859,
+"herramienta": 3.945,
+"trabaja_con": 3.904
+},
+"bombero|ropa|1|2": {
+"vehiculo": 4.623,
+"trabaja_con": 2.53,
+"herramienta": 3.303
+},
+"bombero|ropa,trabaja_con|2|0": {
+"herramienta": 3.53,
+"vehiculo": 5.639
+},
+"bombero|ropa,trabaja_con|2|1": {
+"herramienta": 3.669,
+"vehiculo": 5.617
+},
+"bombero|ropa,trabaja_con|2|2": {
+"vehiculo": 4.762,
+"herramienta": 3.341
+},
+"bombero|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 2.615
+},
+"bombero|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 2.717
+},
+"bombero|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": 2.278
+},
+"bombero|ropa,vehiculo|2|0": {
+"herramienta": 2.59,
+"trabaja_con": 3.772
+},
+"bombero|ropa,vehiculo|2|1": {
+"herramienta": 2.595,
+"trabaja_con": 3.496
+},
+"bombero|ropa,vehiculo|2|2": {
+"trabaja_con": 1.893,
+"herramienta": 1.669
+},
+"bombero|trabaja_con|1|0": {
+"ropa": 6.927,
+"vehiculo": 6.771,
+"herramienta": 5.024
+},
+"bombero|trabaja_con|1|1": {
+"ropa": 6.561,
+"herramienta": 4.263,
+"vehiculo": 6.424
+},
+"bombero|trabaja_con|1|2": {
+"vehiculo": 4.692,
+"ropa": 5.666,
+"herramienta": 3.67
+},
+"bombero|trabaja_con,vehiculo|2|0": {
+"ropa": 4.801,
+"herramienta": 4.268
+},
+"bombero|trabaja_con,vehiculo|2|1": {
+"ropa": 5.519,
+"herramienta": 4.661
+},
+"bombero|trabaja_con,vehiculo|2|2": {
+"herramienta": 3.335,
+"ropa": 3.934
+},
+"bombero|vehiculo|1|0": {
+"herramienta": 4.91,
+"trabaja_con": 5.042,
+"ropa": 5.148
+},
+"bombero|vehiculo|1|1": {
+"herramienta": 3.823,
+"ropa": 4.786,
+"trabaja_con": 3.432
+},
+"bombero|vehiculo|1|2": {
+"herramienta": 3.685,
+"ropa": 4.004,
+"trabaja_con": 2.627
+},
+"carpintero||0|0": {
+"vehiculo": 0.878,
+"herramienta": 4.533,
+"trabaja_con": 2.818,
+"ropa": 4.339
+},
+"carpintero||0|1": {
+"trabaja_con": 1.867,
+"ropa": 3.519,
+"herramienta": 3.731,
+"vehiculo": 0.117
+},
+"carpintero||0|2": {
+"trabaja_con": 0.398,
+"ropa": 1.626,
+"herramienta": 2.768,
+"vehiculo": -1.631
+},
+"carpintero|herramienta|1|0": {
+"ropa": 5.904,
+"trabaja_con": 5.325,
+"vehiculo": 5.642
+},
+"carpintero|herramienta|1|1": {
+"ropa": 4.848,
+"vehiculo": 3.914,
+"trabaja_con": 4.46
+},
+"carpintero|herramienta|1|2": {
+"ropa": 3.624,
+"trabaja_con": 4.399,
+"vehiculo": 3.665
+},
+"carpintero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": 1.907
+},
+"carpintero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 1.932
+},
+"carpintero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": 0.72
+},
+"carpintero|herramienta,ropa|2|0": {
+"vehiculo": 4.569,
+"trabaja_con": 5.588
+},
+"carpintero|herramienta,ropa|2|1": {
+"vehiculo": 4.17,
+"trabaja_con": 3.978
+},
+"carpintero|herramienta,ropa|2|2": {
+"vehiculo": 5.189,
+"trabaja_con": 3.376
+},
+"carpintero|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 2.802
+},
+"carpintero|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 3.488
+},
+"carpintero|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 3.197
+},
+"carpintero|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 1.039
+},
+"carpintero|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 0.728
+},
+"carpintero|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": 1.386
+},
+"carpintero|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 4.343
+},
+"carpintero|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 2.563
+},
+"carpintero|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 5.805
+},
+"carpintero|herramienta,trabaja_con|2|0": {
+"ropa": 3.161,
+"vehiculo": 5.824
+},
+"carpintero|herramienta,trabaja_con|2|1": {
+"vehiculo": 4.157,
+"ropa": 3.967
+},
+"carpintero|herramienta,trabaja_con|2|2": {
+"vehiculo": 2.839,
+"ropa": 4.452
+},
+"carpintero|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 5.389
+},
+"carpintero|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 3.98
+},
+"carpintero|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 1.213
+},
+"carpintero|herramienta,vehiculo|2|0": {
+"ropa": 5.589,
+"trabaja_con": 4.061
+},
+"carpintero|herramienta,vehiculo|2|1": {
+"trabaja_con": 3.602,
+"ropa": 3.965
+},
+"carpintero|herramienta,vehiculo|2|2": {
+"trabaja_con": 3.114,
+"ropa": 2.769
+},
+"carpintero|ropa|1|0": {
+"herramienta": 5.291,
+"vehiculo": 6.174,
+"trabaja_con": 5.044
+},
+"carpintero|ropa|1|1": {
+"herramienta": 4.048,
+"trabaja_con": 4.698,
+"vehiculo": 4.559
+},
+"carpintero|ropa|1|2": {
+"herramienta": 2.476,
+"vehiculo": 2.697,
+"trabaja_con": 3.019
+},
+"carpintero|ropa,trabaja_con|2|0": {
+"herramienta": 3.479,
+"vehiculo": 4.957
+},
+"carpintero|ropa,trabaja_con|2|1": {
+"vehiculo": 4.137,
+"herramienta": 2.624
+},
+"carpintero|ropa,trabaja_con|2|2": {
+"herramienta": 3.633,
+"vehiculo": 2.329
+},
+"carpintero|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 3.673
+},
+"carpintero|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 3.235
+},
+"carpintero|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": 2.532
+},
+"carpintero|ropa,vehiculo|2|0": {
+"trabaja_con": 5.562,
+"herramienta": 4.108
+},
+"carpintero|ropa,vehiculo|2|1": {
+"trabaja_con": 3.964,
+"herramienta": 3.886
+},
+"carpintero|ropa,vehiculo|2|2": {
+"trabaja_con": 1.049,
+"herramienta": 1.448
+},
+"carpintero|trabaja_con|1|0": {
+"ropa": 5.647,
+"vehiculo": 3.985,
+"herramienta": 4.866
+},
+"carpintero|trabaja_con|1|1": {
+"ropa": 4.398,
+"herramienta": 3.667,
+"vehiculo": 1.964
+},
+"carpintero|trabaja_con|1|2": {
+"vehiculo": 2.688,
+"herramienta": 3.808,
+"ropa": 3.588
+},
+"carpintero|trabaja_con,vehiculo|2|0": {
+"ropa": 4.928,
+"herramienta": 3.47
+},
+"carpintero|trabaja_con,vehiculo|2|1": {
+"ropa": 3.347,
+"herramienta": 2.918
+},
+"carpintero|trabaja_con,vehiculo|2|2": {
+"ropa": 5.2,
+"herramienta": 2.638
+},
+"carpintero|vehiculo|1|0": {
+"trabaja_con": 3.981,
+"herramienta": 3.836,
+"ropa": 3.964
+},
+"carpintero|vehiculo|1|1": {
+"ropa": 3.813,
+"herramienta": 3.637,
+"trabaja_con": 2.115
+},
+"carpintero|vehiculo|1|2": {
+"ropa": 0.782,
+"herramienta": 3.169,
+"trabaja_con": 1.262
+},
+"cartero||0|0": {
+"ropa": 5.152,
+"herramienta": 4.641,
+"vehiculo": 6.844,
+"trabaja_con": 4.107
+},
+"cartero||0|1": {
+"trabaja_con": 2.925,
+"vehiculo": 5.748,
+"ropa": 4.458,
+"herramienta": 3.933
+},
+"cartero||0|2": {
+"ropa": 3.212,
+"trabaja_con": 0.926,
+"herramienta": 3.028,
+"vehiculo": 4.189
+},
+"cartero|herramienta|1|0": {
+"vehiculo": 7.635,
+"ropa": 5.979,
+"trabaja_con": 5.304
+},
+"cartero|herramienta|1|1": {
+"ropa": 5.203,
+"vehiculo": 5.077,
+"trabaja_con": 5.73
+},
+"cartero|herramienta|1|2": {
+"vehiculo": 7.288,
+"trabaja_con": 6.209,
+"ropa": 4.881
+},
+"cartero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": 2.045
+},
+"cartero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 2.209
+},
+"cartero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": 1.417
+},
+"cartero|herramienta,ropa|2|0": {
+"trabaja_con": 6.997,
+"vehiculo": 1.302
+},
+"cartero|herramienta,ropa|2|1": {
+"trabaja_con": 4.904,
+"vehiculo": 6.133
+},
+"cartero|herramienta,ropa|2|2": {
+"trabaja_con": 4.63,
+"vehiculo": 1.817
+},
+"cartero|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 3.248
+},
+"cartero|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 4.999
+},
+"cartero|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 5.014
+},
+"cartero|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 2.159
+},
+"cartero|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 1.782
+},
+"cartero|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": 2.637
+},
+"cartero|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 1.808
+},
+"cartero|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 5.23
+},
+"cartero|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 5.347
+},
+"cartero|herramienta,trabaja_con|2|0": {
+"vehiculo": 7.86,
+"ropa": 4.713
+},
+"cartero|herramienta,trabaja_con|2|1": {
+"vehiculo": 6.319,
+"ropa": 5.128
+},
+"cartero|herramienta,trabaja_con|2|2": {
+"ropa": 4.589,
+"vehiculo": 8.02
+},
+"cartero|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 5.377
+},
+"cartero|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 5.192
+},
+"cartero|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 4.31
+},
+"cartero|herramienta,vehiculo|2|0": {
+"ropa": 5.615,
+"trabaja_con": 6.77
+},
+"cartero|herramienta,vehiculo|2|1": {
+"trabaja_con": 3.837,
+"ropa": 4.817
+},
+"cartero|herramienta,vehiculo|2|2": {
+"ropa": 6.085,
+"trabaja_con": 4.729
+},
+"cartero|ropa|1|0": {
+"herramienta": 4.792,
+"vehiculo": 7.195,
+"trabaja_con": 6.112
+},
+"cartero|ropa|1|1": {
+"vehiculo": 6.634,
+"trabaja_con": 5.9,
+"herramienta": 4.598
+},
+"cartero|ropa|1|2": {
+"vehiculo": 6.233,
+"trabaja_con": 5.084,
+"herramienta": 2.647
+},
+"cartero|ropa,trabaja_con|2|0": {
+"herramienta": 3.286,
+"vehiculo": 4.523
+},
+"cartero|ropa,trabaja_con|2|1": {
+"herramienta": 1.999,
+"vehiculo": 6.276
+},
+"cartero|ropa,trabaja_con|2|2": {
+"vehiculo": 4.306,
+"herramienta": 2.329
+},
+"cartero|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 3.39
+},
+"cartero|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 2.635
+},
+"cartero|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": 1.901
+},
+"cartero|ropa,vehiculo|2|0": {
+"trabaja_con": 5.339,
+"herramienta": 3.712
+},
+"cartero|ropa,vehiculo|2|1": {
+"trabaja_con": 3.838,
+"herramienta": 3.49
+},
+"cartero|ropa,vehiculo|2|2": {
+"trabaja_con": 3.379,
+"herramienta": 1.95
+},
+"cartero|trabaja_con|1|0": {
+"herramienta": 4.557,
+"vehiculo": 7.105,
+"ropa": 5.927
+},
+"cartero|trabaja_con|1|1": {
+"vehiculo": 6.418,
+"herramienta": 4.497,
+"ropa": 5.542
+},
+"cartero|trabaja_con|1|2": {
+"ropa": 4.047,
+"herramienta": 4.315,
+"vehiculo": 4.258
+},
+"cartero|trabaja_con,vehiculo|2|0": {
+"ropa": 4.757,
+"herramienta": 3.572
+},
+"cartero|trabaja_con,vehiculo|2|1": {
+"ropa": 4.598,
+"herramienta": 3.57
+},
+"cartero|trabaja_con,vehiculo|2|2": {
+"ropa": 3.167,
+"herramienta": 3.118
+},
+"cartero|vehiculo|1|0": {
+"ropa": 5.147,
+"herramienta": 4.541,
+"trabaja_con": 4.55
+},
+"cartero|vehiculo|1|1": {
+"trabaja_con": 2.993,
+"ropa": 3.846,
+"herramienta": 3.158
+},
+"cartero|vehiculo|1|2": {
+"trabaja_con": 2.313,
+"herramienta": 3.239,
+"ropa": 2.901
+},
+"cocinero||0|0": {
+"ropa": 6.904,
+"herramienta": 4.822,
+"trabaja_con": 6.626,
+"vehiculo": 3.355
+},
+"cocinero||0|1": {
+"herramienta": 4.312,
+"ropa": 5.785,
+"vehiculo": 2.4,
+"trabaja_con": 5.336
+},
+"cocinero||0|2": {
+"herramienta": 3.731,
+"trabaja_con": 3.581,
+"ropa": 4.021,
+"vehiculo": 0.317
+},
+"cocinero|herramienta|1|0": {
+"vehiculo": 5.928,
+"trabaja_con": 6.427,
+"ropa": 7.055
+},
+"cocinero|herramienta|1|1": {
+"vehiculo": 5.156,
+"trabaja_con": 6.345,
+"ropa": 6.435
+},
+"cocinero|herramienta|1|2": {
+"vehiculo": 2.18,
+"trabaja_con": 6.291,
+"ropa": 5.941
+},
+"cocinero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": 3.128
+},
+"cocinero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 2.436
+},
+"cocinero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": 0.922
+},
+"cocinero|herramienta,ropa|2|0": {
+"vehiculo": 6.851,
+"trabaja_con": 6.409
+},
+"cocinero|herramienta,ropa|2|1": {
+"vehiculo": 6.026,
+"trabaja_con": 6.586
+},
+"cocinero|herramienta,ropa|2|2": {
+"vehiculo": 3.734,
+"trabaja_con": 4.248
+},
+"cocinero|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 4.941
+},
+"cocinero|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 3.761
+},
+"cocinero|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 3.225
+},
+"cocinero|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 2.108
+},
+"cocinero|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 3.021
+},
+"cocinero|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": 2.717
+},
+"cocinero|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 4.224
+},
+"cocinero|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 3.388
+},
+"cocinero|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 3.649
+},
+"cocinero|herramienta,trabaja_con|2|0": {
+"vehiculo": 3.776,
+"ropa": 7.204
+},
+"cocinero|herramienta,trabaja_con|2|1": {
+"ropa": 6.267,
+"vehiculo": 4.847
+},
+"cocinero|herramienta,trabaja_con|2|2": {
+"ropa": 5.334,
+"vehiculo": 0.572
+},
+"cocinero|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 6.062
+},
+"cocinero|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 5.13
+},
+"cocinero|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 3.517
+},
+"cocinero|herramienta,vehiculo|2|0": {
+"ropa": 7.138,
+"trabaja_con": 6.005
+},
+"cocinero|herramienta,vehiculo|2|1": {
+"ropa": 5.207,
+"trabaja_con": 4.882
+},
+"cocinero|herramienta,vehiculo|2|2": {
+"trabaja_con": 3.006,
+"ropa": -0.745
+},
+"cocinero|ropa|1|0": {
+"trabaja_con": 5.713,
+"herramienta": 4.409,
+"vehiculo": 3.549
+},
+"cocinero|ropa|1|1": {
+"herramienta": 3.989,
+"vehiculo": 2.793,
+"trabaja_con": 4.346
+},
+"cocinero|ropa|1|2": {
+"herramienta": 3.292,
+"vehiculo": 2.303,
+"trabaja_con": 2.814
+},
+"cocinero|ropa,trabaja_con|2|0": {
+"vehiculo": 2.745,
+"herramienta": 3.609
+},
+"cocinero|ropa,trabaja_con|2|1": {
+"vehiculo": 2.414,
+"herramienta": 2.654
+},
+"cocinero|ropa,trabaja_con|2|2": {
+"herramienta": 2.133,
+"vehiculo": 0.971
+},
+"cocinero|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 3.645
+},
+"cocinero|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 3.293
+},
+"cocinero|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": 3.285
+},
+"cocinero|ropa,vehiculo|2|0": {
+"trabaja_con": 4.583,
+"herramienta": 4.238
+},
+"cocinero|ropa,vehiculo|2|1": {
+"herramienta": 3.164,
+"trabaja_con": 3.527
+},
+"cocinero|ropa,vehiculo|2|2": {
+"herramienta": 1.579,
+"trabaja_con": 4.037
+},
+"cocinero|trabaja_con|1|0": {
+"ropa": 6.301,
+"vehiculo": 2.288,
+"herramienta": 3.466
+},
+"cocinero|trabaja_con|1|1": {
+"herramienta": 3.037,
+"vehiculo": 3.029,
+"ropa": 5.437
+},
+"cocinero|trabaja_con|1|2": {
+"herramienta": 2.419,
+"ropa": 4.612,
+"vehiculo": -0.245
+},
+"cocinero|trabaja_con,vehiculo|2|0": {
+"herramienta": 2.956,
+"ropa": 5.136
+},
+"cocinero|trabaja_con,vehiculo|2|1": {
+"herramienta": 4.37,
+"ropa": 4.622
+},
+"cocinero|trabaja_con,vehiculo|2|2": {
+"ropa": 4.373,
+"herramienta": 2.958
+},
+"cocinero|vehiculo|1|0": {
+"herramienta": 4.986,
+"trabaja_con": 6.576,
+"ropa": 7.213
+},
+"cocinero|vehiculo|1|1": {
+"ropa": 6.084,
+"trabaja_con": 5.139,
+"herramienta": 4.302
+},
+"cocinero|vehiculo|1|2": {
+"ropa": 4.469,
+"herramienta": 3.849,
+"trabaja_con": 0.402
+},
+"enfermero||0|0": {
+"herramienta": 4.466,
+"trabaja_con": 3.671,
+"ropa": 6.616,
+"vehiculo": 2.921
+},
+"enfermero||0|1": {
+"vehiculo": 1.816,
+"ropa": 5.427,
+"trabaja_con": 2.389,
+"herramienta": 3.66
+},
+"enfermero||0|2": {
+"trabaja_con": -0.198,
+"vehiculo": 0.196,
+"herramienta": 3.718,
+"ropa": 4.1
+},
+"enfermero|herramienta|1|0": {
+"trabaja_con": 6.2,
+"vehiculo": 5.551,
+"ropa": 5.316
+},
+"enfermero|herramienta|1|1": {
+"vehiculo": 5.085,
+"ropa": 6.188,
+"trabaja_con": 4.161
+},
+"enfermero|herramienta|1|2": {
+"ropa": 5.888,
+"vehiculo": 5.878,
+"trabaja_con": 5.091
+},
+"enfermero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": 1.306
+},
+"enfermero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 2.191
+},
+"enfermero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": 4.173
+},
+"enfermero|herramienta,ropa|2|0": {
+"trabaja_con": 5.02,
+"vehiculo": 3.684
+},
+"enfermero|herramienta,ropa|2|1": {
+"vehiculo": 3.437,
+"trabaja_con": 3.828
+},
+"enfermero|herramienta,ropa|2|2": {
+"trabaja_con": 3.287,
+"vehiculo": 4.145
+},
+"enfermero|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 1.891
+},
+"enfermero|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 2.526
+},
+"enfermero|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 2.873
+},
+"enfermero|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 1.251
+},
+"enfermero|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 0.989
+},
+"enfermero|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": 0.871
+},
+"enfermero|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 4.348
+},
+"enfermero|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 2.94
+},
+"enfermero|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 2.14
+},
+"enfermero|herramienta,trabaja_con|2|0": {
+"ropa": 6.983,
+"vehiculo": 4.787
+},
+"enfermero|herramienta,trabaja_con|2|1": {
+"ropa": 4.322,
+"vehiculo": 4.192
+},
+"enfermero|herramienta,trabaja_con|2|2": {
+"ropa": 3.765,
+"vehiculo": 6.537
+},
+"enfermero|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 3.29
+},
+"enfermero|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 4.744
+},
+"enfermero|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 6.077
+},
+"enfermero|herramienta,vehiculo|2|0": {
+"ropa": 6.466,
+"trabaja_con": 4.163
+},
+"enfermero|herramienta,vehiculo|2|1": {
+"ropa": 5.948,
+"trabaja_con": 4.722
+},
+"enfermero|herramienta,vehiculo|2|2": {
+"ropa": 6.844,
+"trabaja_con": 5.411
+},
+"enfermero|ropa|1|0": {
+"herramienta": 4.063,
+"vehiculo": 3.111,
+"trabaja_con": 3.962
+},
+"enfermero|ropa|1|1": {
+"trabaja_con": 2.031,
+"herramienta": 3.178,
+"vehiculo": 1.622
+},
+"enfermero|ropa|1|2": {
+"vehiculo": 1.423,
+"trabaja_con": 0.959,
+"herramienta": 3.089
+},
+"enfermero|ropa,trabaja_con|2|0": {
+"herramienta": 4.184,
+"vehiculo": 2.404
+},
+"enfermero|ropa,trabaja_con|2|1": {
+"vehiculo": 2.049,
+"herramienta": 2.847
+},
+"enfermero|ropa,trabaja_con|2|2": {
+"vehiculo": 0.912,
+"herramienta": 1.317
+},
+"enfermero|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 3.691
+},
+"enfermero|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 2.44
+},
+"enfermero|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": 3.024
+},
+"enfermero|ropa,vehiculo|2|0": {
+"herramienta": 4.263,
+"trabaja_con": 0.348
+},
+"enfermero|ropa,vehiculo|2|1": {
+"trabaja_con": 1.867,
+"herramienta": 2.338
+},
+"enfermero|ropa,vehiculo|2|2": {
+"trabaja_con": -0.232,
+"herramienta": 2.585
+},
+"enfermero|trabaja_con|1|0": {
+"ropa": 7.073,
+"vehiculo": 3.582,
+"herramienta": 5.011
+},
+"enfermero|trabaja_con|1|1": {
+"herramienta": 4.387,
+"ropa": 5.882,
+"vehiculo": 2.661
+},
+"enfermero|trabaja_con|1|2": {
+"herramienta": 3.146,
+"vehiculo": 1.975,
+"ropa": 3.302
+},
+"enfermero|trabaja_con,vehiculo|2|0": {
+"herramienta": 4.409,
+"ropa": 6.589
+},
+"enfermero|trabaja_con,vehiculo|2|1": {
+"ropa": 5.436,
+"herramienta": 4.17
+},
+"enfermero|trabaja_con,vehiculo|2|2": {
+"ropa": 5.074,
+"herramienta": 3.169
+},
+"enfermero|vehiculo|1|0": {
+"trabaja_con": 3.505,
+"herramienta": 4.673,
+"ropa": 6.532
+},
+"enfermero|vehiculo|1|1": {
+"trabaja_con": 2.163,
+"ropa": 5.334,
+"herramienta": 4.162
+},
+"enfermero|vehiculo|1|2": {
+"ropa": 4.706,
+"herramienta": 3.284,
+"trabaja_con": 1.513
+},
+"mecánico||0|0": {
+"herramienta": 4.539,
+"vehiculo": 5.547,
+"trabaja_con": 4.592,
+"ropa": 6.833
+},
+"mecánico||0|1": {
+"ropa": 5.861,
+"vehiculo": 4.657,
+"trabaja_con": 3.44,
+"herramienta": 3.931
+},
+"mecánico||0|2": {
+"ropa": 3.966,
+"trabaja_con": 1.09,
+"herramienta": 3.535,
+"vehiculo": 3.386
+},
+"mecánico|herramienta|1|0": {
+"trabaja_con": 5.886,
+"vehiculo": 4.472,
+"ropa": 6.897
+},
+"mecánico|herramienta|1|1": {
+"ropa": 5.873,
+"vehiculo": 5.348,
+"trabaja_con": 4.968
+},
+"mecánico|herramienta|1|2": {
+"ropa": 5.188,
+"trabaja_con": 4.74,
+"vehiculo": 4.42
+},
+"mecánico|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": 1.619
+},
+"mecánico|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 1.35
+},
+"mecánico|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": 0.82
+},
+"mecánico|herramienta,ropa|2|0": {
+"vehiculo": 7.135,
+"trabaja_con": 4.438
+},
+"mecánico|herramienta,ropa|2|1": {
+"vehiculo": 4.376,
+"trabaja_con": 3.992
+},
+"mecánico|herramienta,ropa|2|2": {
+"vehiculo": 5.59,
+"trabaja_con": 4.36
+},
+"mecánico|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 6.59
+},
+"mecánico|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 2.999
+},
+"mecánico|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 4.691
+},
+"mecánico|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 0.064
+},
+"mecánico|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 3.084
+},
+"mecánico|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": 2.528
+},
+"mecánico|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 5.358
+},
+"mecánico|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 5.394
+},
+"mecánico|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 5.445
+},
+"mecánico|herramienta,trabaja_con|2|0": {
+"vehiculo": 5.981,
+"ropa": 7.172
+},
+"mecánico|herramienta,trabaja_con|2|1": {
+"ropa": 6.081,
+"vehiculo": 5.439
+},
+"mecánico|herramienta,trabaja_con|2|2": {
+"vehiculo": 5.059,
+"ropa": 6.27
+},
+"mecánico|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 6.438
+},
+"mecánico|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 4.421
+},
+"mecánico|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 3.227
+},
+"mecánico|herramienta,vehiculo|2|0": {
+"trabaja_con": 6.608,
+"ropa": 6.202
+},
+"mecánico|herramienta,vehiculo|2|1": {
+"ropa": 5.264,
+"trabaja_con": 5.189
+},
+"mecánico|herramienta,vehiculo|2|2": {
+"ropa": 5.516,
+"trabaja_con": 5.843
+},
+"mecánico|ropa|1|0": {
+"herramienta": 4.593,
+"vehiculo": 4.832,
+"trabaja_con": 4.267
+},
+"mecánico|ropa|1|1": {
+"trabaja_con": 3.603,
+"vehiculo": 4.333,
+"herramienta": 3.531
+},
+"mecánico|ropa|1|2": {
+"herramienta": 3.002,
+"vehiculo": 2.334,
+"trabaja_con": 2.394
+},
+"mecánico|ropa,trabaja_con|2|0": {
+"vehiculo": 5.5,
+"herramienta": 3.889
+},
+"mecánico|ropa,trabaja_con|2|1": {
+"herramienta": 3.291,
+"vehiculo": 3.539
+},
+"mecánico|ropa,trabaja_con|2|2": {
+"vehiculo": 2.39,
+"herramienta": 2.724
+},
+"mecánico|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 2.321
+},
+"mecánico|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 2.295
+},
+"mecánico|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": 0.908
+},
+"mecánico|ropa,vehiculo|2|0": {
+"trabaja_con": 4.917,
+"herramienta": 4.331
+},
+"mecánico|ropa,vehiculo|2|1": {
+"herramienta": 3.155,
+"trabaja_con": 3.824
+},
+"mecánico|ropa,vehiculo|2|2": {
+"trabaja_con": 3.437,
+"herramienta": 2.29
+},
+"mecánico|trabaja_con|1|0": {
+"ropa": 7.392,
+"herramienta": 4.461,
+"vehiculo": 6.439
+},
+"mecánico|trabaja_con|1|1": {
+"herramienta": 4.627,
+"ropa": 6.803,
+"vehiculo": 5.793
+},
+"mecánico|trabaja_con|1|2": {
+"ropa": 3.747,
+"herramienta": 3.518,
+"vehiculo": 3.819
+},
+"mecánico|trabaja_con,vehiculo|2|0": {
+"herramienta": 4.623,
+"ropa": 7.222
+},
+"mecánico|trabaja_con,vehiculo|2|1": {
+"herramienta": 2.978,
+"ropa": 6.067
+},
+"mecánico|trabaja_con,vehiculo|2|2": {
+"ropa": 2.023,
+"herramienta": 2.728
+},
+"mecánico|vehiculo|1|0": {
+"herramienta": 5.215,
+"ropa": 7.612,
+"trabaja_con": 6.28
+},
+"mecánico|vehiculo|1|1": {
+"ropa": 7.209,
+"herramienta": 3.729,
+"trabaja_con": 5.737
+},
+"mecánico|vehiculo|1|2": {
+"trabaja_con": 4.505,
+"herramienta": 3.087,
+"ropa": 5.137
+},
+"médico||0|0": {
+"trabaja_con": 2.511,
+"ropa": 4.229,
+"herramienta": 2.885,
+"vehiculo": 0.456
+},
+"médico||0|1": {
+"trabaja_con": 0.962,
+"vehiculo": -0.594,
+"ropa": 2.84,
+"herramienta": 1.465
+},
+"médico||0|2": {
+"herramienta": -0.387,
+"vehiculo": -3.136,
+"ropa": 0.098,
+"trabaja_con": -0.787
+},
+"médico|herramienta|1|0": {
+"vehiculo": 6.561,
+"trabaja_con": 7.409,
+"ropa": 7.756
+},
+"médico|herramienta|1|1": {
+"trabaja_con": 5.823,
+"vehiculo": 5.889,
+"ropa": 5.808
+},
+"médico|herramienta|1|2": {
+"trabaja_con": 4.325,
+"vehiculo": 3.849,
+"ropa": 4.956
+},
+"médico|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": 1.766
+},
+"médico|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 2.085
+},
+"médico|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": 1.991
+},
+"médico|herramienta,ropa|2|0": {
+"vehiculo": 6.426,
+"trabaja_con": 7.041
+},
+"médico|herramienta,ropa|2|1": {
+"trabaja_con": 5.621,
+"vehiculo": 5.612
+},
+"médico|herramienta,ropa|2|2": {
+"vehiculo": 3.88,
+"trabaja_con": 4.436
+},
+"médico|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 4.525
+},
+"médico|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 3.397
+},
+"médico|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 3.16
+},
+"médico|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 1.893
+},
+"médico|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 1.508
+},
+"médico|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": 0.473
+},
+"médico|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 6.086
+},
+"médico|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 4.283
+},
+"médico|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 2.492
+},
+"médico|herramienta,trabaja_con|2|0": {
+"ropa": 6.985,
+"vehiculo": 5.563
+},
+"médico|herramienta,trabaja_con|2|1": {
+"vehiculo": 5.201,
+"ropa": 4.486
+},
+"médico|herramienta,trabaja_con|2|2": {
+"ropa": -0.865,
+"vehiculo": 3.349
+},
+"médico|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 4.679
+},
+"médico|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 4.634
+},
+"médico|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 3.292
+},
+"médico|herramienta,vehiculo|2|0": {
+"trabaja_con": 6.155,
+"ropa": 7.014
+},
+"médico|herramienta,vehiculo|2|1": {
+"trabaja_con": 5.186,
+"ropa": 4.886
+},
+"médico|herramienta,vehiculo|2|2": {
+"trabaja_con": 4.407,
+"ropa": 5.315
+},
+"médico|ropa|1|0": {
+"herramienta": 4.129,
+"vehiculo": 5.035,
+"trabaja_con": 5.669
+},
+"médico|ropa|1|1": {
+"trabaja_con": 4.197,
+"herramienta": 3.137,
+"vehiculo": 3.781
+},
+"médico|ropa|1|2": {
+"trabaja_con": 1.882,
+"vehiculo": 1.261,
+"herramienta": 1.164
+},
+"médico|ropa,trabaja_con|2|0": {
+"herramienta": 3.47,
+"vehiculo": 2.454
+},
+"médico|ropa,trabaja_con|2|1": {
+"herramienta": 2.047,
+"vehiculo": 0.884
+},
+"médico|ropa,trabaja_con|2|2": {
+"herramienta": 0.752,
+"vehiculo": -1.037
+},
+"médico|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 2.853
+},
+"médico|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 1.478
+},
+"médico|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": -1.583
+},
+"médico|ropa,vehiculo|2|0": {
+"trabaja_con": 3.635,
+"herramienta": 2.511
+},
+"médico|ropa,vehiculo|2|1": {
+"herramienta": 2.47,
+"trabaja_con": 2.459
+},
+"médico|ropa,vehiculo|2|2": {
+"herramienta": 0.178,
+"trabaja_con": 0.044
+},
+"médico|trabaja_con|1|0": {
+"ropa": 5.732,
+"herramienta": 3.855,
+"vehiculo": 2.362
+},
+"médico|trabaja_con|1|1": {
+"ropa": 4.048,
+"herramienta": 3.229,
+"vehiculo": 1.315
+},
+"médico|trabaja_con|1|2": {
+"ropa": 1.185,
+"herramienta": 0.511,
+"vehiculo": -1.467
+},
+"médico|trabaja_con,vehiculo|2|0": {
+"herramienta": 3.394,
+"ropa": 4.62
+},
+"médico|trabaja_con,vehiculo|2|1": {
+"ropa": 3.703,
+"herramienta": 3.109
+},
+"médico|trabaja_con,vehiculo|2|2": {
+"herramienta": -0.073,
+"ropa": -0.295
+},
+"médico|vehiculo|1|0": {
+"trabaja_con": 2.729,
+"herramienta": 2.662,
+"ropa": 3.187
+},
+"médico|vehiculo|1|1": {
+"herramienta": 1.107,
+"ropa": 2.547,
+"trabaja_con": 0.852
+},
+"médico|vehiculo|1|2": {
+"herramienta": -0.426,
+"ropa": -0.482,
+"trabaja_con": -1.695
+},
+"peluquero||0|0": {
+"vehiculo": 1.532,
+"ropa": 4.438,
+"herramienta": 4.382,
+"trabaja_con": 2.85
+},
+"peluquero||0|1": {
+"vehiculo": 0.361,
+"herramienta": 3.666,
+"trabaja_con": 1.572,
+"ropa": 3.121
+},
+"peluquero||0|2": {
+"herramienta": 2.901,
+"ropa": 1.592,
+"vehiculo": -0.636,
+"trabaja_con": 0.242
+},
+"peluquero|herramienta|1|0": {
+"vehiculo": 2.25,
+"trabaja_con": 4.936,
+"ropa": 5.914
+},
+"peluquero|herramienta|1|1": {
+"ropa": 5.273,
+"vehiculo": 3.943,
+"trabaja_con": 4.352
+},
+"peluquero|herramienta|1|2": {
+"vehiculo": 3.618,
+"ropa": 4.649,
+"trabaja_con": 3.532
+},
+"peluquero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": 0.705
+},
+"peluquero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 1.729
+},
+"peluquero|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": 1.502
+},
+"peluquero|herramienta,ropa|2|0": {
+"trabaja_con": 4.723,
+"vehiculo": 3.511
+},
+"peluquero|herramienta,ropa|2|1": {
+"trabaja_con": 4.338,
+"vehiculo": 4.345
+},
+"peluquero|herramienta,ropa|2|2": {
+"vehiculo": 3.007,
+"trabaja_con": 3.032
+},
+"peluquero|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 3.654
+},
+"peluquero|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 2.845
+},
+"peluquero|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 1.897
+},
+"peluquero|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 2.202
+},
+"peluquero|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 2.308
+},
+"peluquero|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": 1.693
+},
+"peluquero|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 3.334
+},
+"peluquero|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 3.344
+},
+"peluquero|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 2.072
+},
+"peluquero|herramienta,trabaja_con|2|0": {
+"ropa": 5.51,
+"vehiculo": 4.333
+},
+"peluquero|herramienta,trabaja_con|2|1": {
+"ropa": 4.882,
+"vehiculo": 3.025
+},
+"peluquero|herramienta,trabaja_con|2|2": {
+"vehiculo": 1.363,
+"ropa": 3.292
+},
+"peluquero|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 5.255
+},
+"peluquero|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 4.354
+},
+"peluquero|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 4.049
+},
+"peluquero|herramienta,vehiculo|2|0": {
+"trabaja_con": 2.355,
+"ropa": 3.171
+},
+"peluquero|herramienta,vehiculo|2|1": {
+"ropa": 4.464,
+"trabaja_con": 3.918
+},
+"peluquero|herramienta,vehiculo|2|2": {
+"ropa": 4.037,
+"trabaja_con": 3.46
+},
+"peluquero|ropa|1|0": {
+"trabaja_con": 5.914,
+"vehiculo": 5.596,
+"herramienta": 4.585
+},
+"peluquero|ropa|1|1": {
+"vehiculo": 4.106,
+"herramienta": 3.828,
+"trabaja_con": 5.077
+},
+"peluquero|ropa|1|2": {
+"trabaja_con": 3.399,
+"herramienta": 3.922,
+"vehiculo": 2.932
+},
+"peluquero|ropa,trabaja_con|2|0": {
+"herramienta": 4.022,
+"vehiculo": 3.619
+},
+"peluquero|ropa,trabaja_con|2|1": {
+"vehiculo": 3.228,
+"herramienta": 2.554
+},
+"peluquero|ropa,trabaja_con|2|2": {
+"vehiculo": 0.583,
+"herramienta": 1.815
+},
+"peluquero|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 3.423
+},
+"peluquero|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 3.619
+},
+"peluquero|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": 2.156
+},
+"peluquero|ropa,vehiculo|2|0": {
+"trabaja_con": 4.96,
+"herramienta": 4.104
+},
+"peluquero|ropa,vehiculo|2|1": {
+"trabaja_con": 3.712,
+"herramienta": 3.051
+},
+"peluquero|ropa,vehiculo|2|2": {
+"trabaja_con": 1.968,
+"herramienta": 0.04
+},
+"peluquero|trabaja_con|1|0": {
+"vehiculo": 2.996,
+"herramienta": 4.773,
+"ropa": 5.61
+},
+"peluquero|trabaja_con|1|1": {
+"herramienta": 4.085,
+"ropa": 4.784,
+"vehiculo": 2.018
+},
+"peluquero|trabaja_con|1|2": {
+"ropa": 4.024,
+"herramienta": 2.646,
+"vehiculo": 1.123
+},
+"peluquero|trabaja_con,vehiculo|2|0": {
+"ropa": 5.702,
+"herramienta": 4.456
+},
+"peluquero|trabaja_con,vehiculo|2|1": {
+"ropa": 4.622,
+"herramienta": 3.828
+},
+"peluquero|trabaja_con,vehiculo|2|2": {
+"herramienta": 3.165,
+"ropa": 4.124
+},
+"peluquero|vehiculo|1|0": {
+"trabaja_con": 2.866,
+"herramienta": 3.478,
+"ropa": 4.904
+},
+"peluquero|vehiculo|1|1": {
+"trabaja_con": 1.713,
+"ropa": 3.412,
+"herramienta": 4.219
+},
+"peluquero|vehiculo|1|2": {
+"ropa": 2.986,
+"herramienta": 3.633,
+"trabaja_con": 0.388
+},
+"policía||0|0": {
+"vehiculo": 4.769,
+"herramienta": 4.721,
+"ropa": 4.78,
+"trabaja_con": 3.057
+},
+"policía||0|1": {
+"ropa": 3.661,
+"herramienta": 3.767,
+"vehiculo": 3.683,
+"trabaja_con": 2.141
+},
+"policía||0|2": {
+"herramienta": 2.789,
+"vehiculo": 2.367,
+"ropa": 2.233,
+"trabaja_con": 0.018
+},
+"policía|herramienta|1|0": {
+"trabaja_con": 4.391,
+"ropa": 6.695,
+"vehiculo": 6.277
+},
+"policía|herramienta|1|1": {
+"vehiculo": 5.406,
+"trabaja_con": 5.117,
+"ropa": 5.183
+},
+"policía|herramienta|1|2": {
+"ropa": 4.917,
+"vehiculo": 4.271,
+"trabaja_con": 3.83
+},
+"policía|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": 1.359
+},
+"policía|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 1.291
+},
+"policía|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": -0.728
+},
+"policía|herramienta,ropa|2|0": {
+"trabaja_con": 4.889,
+"vehiculo": 6.613
+},
+"policía|herramienta,ropa|2|1": {
+"vehiculo": 6.017,
+"trabaja_con": 4.347
+},
+"policía|herramienta,ropa|2|2": {
+"vehiculo": 4.979,
+"trabaja_con": 3.977
+},
+"policía|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 4.138
+},
+"policía|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 4.123
+},
+"policía|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 2.95
+},
+"policía|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 1.924
+},
+"policía|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 1.326
+},
+"policía|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": -0.535
+},
+"policía|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 5.846
+},
+"policía|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 4.3
+},
+"policía|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 4.24
+},
+"policía|herramienta,trabaja_con|2|0": {
+"vehiculo": 4.292,
+"ropa": 5.663
+},
+"policía|herramienta,trabaja_con|2|1": {
+"vehiculo": 5.026,
+"ropa": 5.291
+},
+"policía|herramienta,trabaja_con|2|2": {
+"vehiculo": 4.249,
+"ropa": 3.801
+},
+"policía|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 4.46
+},
+"policía|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 4.044
+},
+"policía|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 4.712
+},
+"policía|herramienta,vehiculo|2|0": {
+"trabaja_con": 5.273,
+"ropa": 6.792
+},
+"policía|herramienta,vehiculo|2|1": {
+"trabaja_con": 5.589,
+"ropa": 5.785
+},
+"policía|herramienta,vehiculo|2|2": {
+"trabaja_con": 5.683,
+"ropa": 3.073
+},
+"policía|ropa|1|0": {
+"trabaja_con": 6.396,
+"herramienta": 4.611,
+"vehiculo": 6.974
+},
+"policía|ropa|1|1": {
+"herramienta": 4.311,
+"vehiculo": 5.619,
+"trabaja_con": 5.865
+},
+"policía|ropa|1|2": {
+"vehiculo": 3.841,
+"trabaja_con": 2.823,
+"herramienta": 3.339
+},
+"policía|ropa,trabaja_con|2|0": {
+"herramienta": 4.384,
+"vehiculo": 5.912
+},
+"policía|ropa,trabaja_con|2|1": {
+"herramienta": 4.135,
+"vehiculo": 5.589
+},
+"policía|ropa,trabaja_con|2|2": {
+"vehiculo": -0.173,
+"herramienta": 2.5
+},
+"policía|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 2.447
+},
+"policía|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 3.106
+},
+"policía|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": 1.775
+},
+"policía|ropa,vehiculo|2|0": {
+"trabaja_con": 5.141,
+"herramienta": 4.113
+},
+"policía|ropa,vehiculo|2|1": {
+"trabaja_con": 4.96,
+"herramienta": 3.858
+},
+"policía|ropa,vehiculo|2|2": {
+"herramienta": 2.903,
+"trabaja_con": 1.997
+},
+"policía|trabaja_con|1|0": {
+"herramienta": 4.778,
+"vehiculo": 5.858,
+"ropa": 6.668
+},
+"policía|trabaja_con|1|1": {
+"vehiculo": 4.964,
+"herramienta": 4.136,
+"ropa": 5.396
+},
+"policía|trabaja_con|1|2": {
+"herramienta": 3.316,
+"vehiculo": 3.036,
+"ropa": 2.35
+},
+"policía|trabaja_con,vehiculo|2|0": {
+"herramienta": 4.113,
+"ropa": 5.715
+},
+"policía|trabaja_con,vehiculo|2|1": {
+"herramienta": 3.188,
+"ropa": 5.003
+},
+"policía|trabaja_con,vehiculo|2|2": {
+"herramienta": 2.078,
+"ropa": 5.217
+},
+"policía|vehiculo|1|0": {
+"trabaja_con": 6.235,
+"ropa": 6.559,
+"herramienta": 4.588
+},
+"policía|vehiculo|1|1": {
+"trabaja_con": 5.255,
+"ropa": 5.869,
+"herramienta": 4.916
+},
+"policía|vehiculo|1|2": {
+"ropa": 4.167,
+"herramienta": 4.088,
+"trabaja_con": 2.306
+},
+"profesor||0|0": {
+"herramienta": 4.838,
+"vehiculo": 2.919,
+"trabaja_con": 6.372,
+"ropa": 6.913
+},
+"profesor||0|1": {
+"vehiculo": 2.473,
+"trabaja_con": 5.299,
+"ropa": 5.841,
+"herramienta": 4.11
+},
+"profesor||0|2": {
+"trabaja_con": 2.485,
+"ropa": 4.477,
+"herramienta": 3.298,
+"vehiculo": 0.283
+},
+"profesor|herramienta|1|0": {
+"vehiculo": 5.593,
+"ropa": 6.137,
+"trabaja_con": 7.097
+},
+"profesor|herramienta|1|1": {
+"ropa": 6.043,
+"trabaja_con": 5.744,
+"vehiculo": 5.513
+},
+"profesor|herramienta|1|2": {
+"ropa": 5.047,
+"vehiculo": 4.807,
+"trabaja_con": 6.359
+},
+"profesor|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": 3.323
+},
+"profesor|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 0.441
+},
+"profesor|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": 2.0
+},
+"profesor|herramienta,ropa|2|0": {
+"vehiculo": 4.893,
+"trabaja_con": 5.717
+},
+"profesor|herramienta,ropa|2|1": {
+"vehiculo": 4.382,
+"trabaja_con": 3.935
+},
+"profesor|herramienta,ropa|2|2": {
+"vehiculo": 4.187,
+"trabaja_con": 5.162
+},
+"profesor|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 3.811
+},
+"profesor|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 3.594
+},
+"profesor|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 4.403
+},
+"profesor|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 3.437
+},
+"profesor|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 2.207
+},
+"profesor|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": 2.873
+},
+"profesor|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 5.507
+},
+"profesor|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 4.148
+},
+"profesor|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 4.261
+},
+"profesor|herramienta,trabaja_con|2|0": {
+"vehiculo": 3.126,
+"ropa": 6.632
+},
+"profesor|herramienta,trabaja_con|2|1": {
+"ropa": 4.764,
+"vehiculo": 2.434
+},
+"profesor|herramienta,trabaja_con|2|2": {
+"ropa": 7.263,
+"vehiculo": 4.084
+},
+"profesor|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 5.842
+},
+"profesor|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 6.233
+},
+"profesor|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 5.83
+},
+"profesor|herramienta,vehiculo|2|0": {
+"ropa": 7.01,
+"trabaja_con": 5.724
+},
+"profesor|herramienta,vehiculo|2|1": {
+"trabaja_con": 5.916,
+"ropa": 5.092
+},
+"profesor|herramienta,vehiculo|2|2": {
+"trabaja_con": 3.869,
+"ropa": 6.303
+},
+"profesor|ropa|1|0": {
+"trabaja_con": 5.55,
+"herramienta": 4.2,
+"vehiculo": 3.469
+},
+"profesor|ropa|1|1": {
+"trabaja_con": 4.372,
+"vehiculo": 2.28,
+"herramienta": 3.222
+},
+"profesor|ropa|1|2": {
+"vehiculo": 0.817,
+"trabaja_con": 3.312,
+"herramienta": 2.505
+},
+"profesor|ropa,trabaja_con|2|0": {
+"herramienta": 3.329,
+"vehiculo": 0.183
+},
+"profesor|ropa,trabaja_con|2|1": {
+"herramienta": 2.492,
+"vehiculo": 0.533
+},
+"profesor|ropa,trabaja_con|2|2": {
+"herramienta": 2.489,
+"vehiculo": 1.538
+},
+"profesor|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 1.969
+},
+"profesor|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 2.614
+},
+"profesor|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": 1.896
+},
+"profesor|ropa,vehiculo|2|0": {
+"herramienta": 3.947,
+"trabaja_con": 4.997
+},
+"profesor|ropa,vehiculo|2|1": {
+"herramienta": 3.583,
+"trabaja_con": 4.232
+},
+"profesor|ropa,vehiculo|2|2": {
+"trabaja_con": 2.452,
+"herramienta": 0.953
+},
+"profesor|trabaja_con|1|0": {
+"vehiculo": 3.251,
+"ropa": 6.014,
+"herramienta": 4.279
+},
+"profesor|trabaja_con|1|1": {
+"herramienta": 3.268,
+"vehiculo": 1.351,
+"ropa": 5.922
+},
+"profesor|trabaja_con|1|2": {
+"herramienta": 3.083,
+"vehiculo": 0.134,
+"ropa": 3.718
+},
+"profesor|trabaja_con,vehiculo|2|0": {
+"herramienta": 3.316,
+"ropa": 4.927
+},
+"profesor|trabaja_con,vehiculo|2|1": {
+"herramienta": 2.988,
+"ropa": 5.341
+},
+"profesor|trabaja_con,vehiculo|2|2": {
+"herramienta": 2.403,
+"ropa": 3.594
+},
+"profesor|vehiculo|1|0": {
+"herramienta": 4.36,
+"trabaja_con": 5.517,
+"ropa": 6.149
+},
+"profesor|vehiculo|1|1": {
+"trabaja_con": 4.996,
+"herramienta": 3.998,
+"ropa": 6.172
+},
+"profesor|vehiculo|1|2": {
+"trabaja_con": 3.264,
+"ropa": 3.384,
+"herramienta": 3.07
+},
+"veterinario||0|0": {
+"ropa": 4.851,
+"trabaja_con": 5.507,
+"herramienta": 2.541,
+"vehiculo": 1.92
+},
+"veterinario||0|1": {
+"herramienta": 1.775,
+"trabaja_con": 3.697,
+"vehiculo": 0.975,
+"ropa": 3.447
+},
+"veterinario||0|2": {
+"herramienta": 0.216,
+"vehiculo": -2.481,
+"trabaja_con": 1.76,
+"ropa": 1.312
+},
+"veterinario|herramienta|1|0": {
+"ropa": 7.187,
+"trabaja_con": 7.313,
+"vehiculo": 7.46
+},
+"veterinario|herramienta|1|1": {
+"trabaja_con": 6.6,
+"vehiculo": 5.785,
+"ropa": 7.106
+},
+"veterinario|herramienta|1|2": {
+"ropa": 4.217,
+"vehiculo": 5.93,
+"trabaja_con": 5.254
+},
+"veterinario|herramienta,lugar,ropa,trabaja_con,vehiculo|3|0": {
+"mira_bien": 2.238
+},
+"veterinario|herramienta,lugar,ropa,trabaja_con,vehiculo|3|1": {
+"mira_bien": 2.057
+},
+"veterinario|herramienta,lugar,ropa,trabaja_con,vehiculo|3|2": {
+"mira_bien": 0.922
+},
+"veterinario|herramienta,ropa|2|0": {
+"trabaja_con": 6.501,
+"vehiculo": 6.928
+},
+"veterinario|herramienta,ropa|2|1": {
+"vehiculo": 4.723,
+"trabaja_con": 5.772
+},
+"veterinario|herramienta,ropa|2|2": {
+"vehiculo": 4.053,
+"trabaja_con": 3.98
+},
+"veterinario|herramienta,ropa,trabaja_con|3|0": {
+"vehiculo": 4.751
+},
+"veterinario|herramienta,ropa,trabaja_con|3|1": {
+"vehiculo": 3.78
+},
+"veterinario|herramienta,ropa,trabaja_con|3|2": {
+"vehiculo": 4.172
+},
+"veterinario|herramienta,ropa,trabaja_con,vehiculo|3|0": {
+"lugar": 1.978
+},
+"veterinario|herramienta,ropa,trabaja_con,vehiculo|3|1": {
+"lugar": 1.519
+},
+"veterinario|herramienta,ropa,trabaja_con,vehiculo|3|2": {
+"lugar": 1.32
+},
+"veterinario|herramienta,ropa,vehiculo|3|0": {
+"trabaja_con": 5.825
+},
+"veterinario|herramienta,ropa,vehiculo|3|1": {
+"trabaja_con": 4.602
+},
+"veterinario|herramienta,ropa,vehiculo|3|2": {
+"trabaja_con": 5.583
+},
+"veterinario|herramienta,trabaja_con|2|0": {
+"vehiculo": 6.355,
+"ropa": 5.678
+},
+"veterinario|herramienta,trabaja_con|2|1": {
+"vehiculo": 4.63,
+"ropa": 4.448
+},
+"veterinario|herramienta,trabaja_con|2|2": {
+"ropa": 4.365,
+"vehiculo": 2.341
+},
+"veterinario|herramienta,trabaja_con,vehiculo|3|0": {
+"ropa": 5.632
+},
+"veterinario|herramienta,trabaja_con,vehiculo|3|1": {
+"ropa": 3.421
+},
+"veterinario|herramienta,trabaja_con,vehiculo|3|2": {
+"ropa": 2.736
+},
+"veterinario|herramienta,vehiculo|2|0": {
+"trabaja_con": 6.834,
+"ropa": 6.948
+},
+"veterinario|herramienta,vehiculo|2|1": {
+"ropa": 4.714,
+"trabaja_con": 6.205
+},
+"veterinario|herramienta,vehiculo|2|2": {
+"ropa": 5.906,
+"trabaja_con": 4.846
+},
+"veterinario|ropa|1|0": {
+"herramienta": 4.152,
+"trabaja_con": 6.855,
+"vehiculo": 5.658
+},
+"veterinario|ropa|1|1": {
+"trabaja_con": 5.611,
+"herramienta": 2.829,
+"vehiculo": 4.404
+},
+"veterinario|ropa|1|2": {
+"vehiculo": 2.259,
+"trabaja_con": 4.999,
+"herramienta": 1.938
+},
+"veterinario|ropa,trabaja_con|2|0": {
+"herramienta": 2.493,
+"vehiculo": 3.825
+},
+"veterinario|ropa,trabaja_con|2|1": {
+"herramienta": 1.555,
+"vehiculo": 2.071
+},
+"veterinario|ropa,trabaja_con|2|2": {
+"vehiculo": 1.681,
+"herramienta": 0.43
+},
+"veterinario|ropa,trabaja_con,vehiculo|3|0": {
+"herramienta": 0.879
+},
+"veterinario|ropa,trabaja_con,vehiculo|3|1": {
+"herramienta": 0.298
+},
+"veterinario|ropa,trabaja_con,vehiculo|3|2": {
+"herramienta": 0.005
+},
+"veterinario|ropa,vehiculo|2|0": {
+"trabaja_con": 5.362,
+"herramienta": 2.438
+},
+"veterinario|ropa,vehiculo|2|1": {
+"trabaja_con": 4.976,
+"herramienta": 1.944
+},
+"veterinario|ropa,vehiculo|2|2": {
+"herramienta": 1.488,
+"trabaja_con": 2.976
+},
+"veterinario|trabaja_con|1|0": {
+"vehiculo": 1.239,
+"ropa": 3.94,
+"herramienta": 2.212
+},
+"veterinario|trabaja_con|1|1": {
+"herramienta": 1.007,
+"ropa": 2.278,
+"vehiculo": 0.321
+},
+"veterinario|trabaja_con|1|2": {
+"vehiculo": -1.983,
+"herramienta": 0.716,
+"ropa": 1.305
+},
+"veterinario|trabaja_con,vehiculo|2|0": {
+"ropa": 1.385,
+"herramienta": 1.68
+},
+"veterinario|trabaja_con,vehiculo|2|1": {
+"herramienta": 1.641,
+"ropa": 2.097
+},
+"veterinario|trabaja_con,vehiculo|2|2": {
+"ropa": -0.555,
+"herramienta": -1.014
+},
+"veterinario|vehiculo|1|0": {
+"trabaja_con": 4.532,
+"ropa": 4.323,
+"herramienta": 2.404
+},
+"veterinario|vehiculo|1|1": {
+"trabaja_con": 4.294,
+"ropa": 3.444,
+"herramienta": 1.456
+},
+"veterinario|vehiculo|1|2": {
+"trabaja_con": 1.706,
+"herramienta": 0.143,
+"ropa": 1.082
+}
+}
+}

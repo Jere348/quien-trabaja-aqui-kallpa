@@ -52,10 +52,13 @@ def nuevo_estado():
     return {"cands": set(OFICIOS), "dadas": set(), "fallos": 0}
 
 
-def dar_pista(est, objetivo):
-    """Aplica la siguiente pista al estado. Retorna (atributo, valor) o None."""
-    attr = elegir_pista(est)
-    if not attr:
+def dar_pista(est, objetivo, politica=None):
+    """Aplica la siguiente pista al estado. Retorna (atributo, valor) o None.
+
+    politica(est, objetivo) permite sustituir el baseline ID3 por otro motor de decisión.
+    """
+    attr = politica(est, objetivo) if politica else elegir_pista(est)
+    if attr not in ATRIBUTOS:
         return None
     valor = OFICIOS[objetivo][attr]
     est["dadas"].add(attr)
@@ -72,11 +75,11 @@ def evaluar(est, objetivo, respuesta):
     return False
 
 
-def partida(objetivo, responder, decir=print):
+def partida(objetivo, responder, decir=print, politica=None, est=None):
     """Ejecuta una partida. Retorna (pistas, intentos)."""
-    est = nuevo_estado()
+    est = est or nuevo_estado()
     while True:
-        pista = dar_pista(est, objetivo)
+        pista = dar_pista(est, objetivo, politica)
         if pista:
             decir(f"\n🤖 Pista: {frase(*pista)}")
         else:
